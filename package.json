@@ -1,6 +1,6 @@
 {
   "name": "capacitor-barometer",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Capacitor-Barometer is a native plugin for Capacitor that provides access to barometric pressure sensor data on supported devices. Easily integrate real-time atmospheric pressure readings into your cross-platform mobile apps for weather tracking, altitude estimation, or scientific applications.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -10,16 +10,18 @@
     "android/src/main/",
     "android/build.gradle",
     "dist/",
+    "ios/Plugin",
     "ios/Sources",
-    "ios/Tests",
     "Package.swift",
-    "CapacitorBarometer.podspec"
+    "CapacitorBarometer.podspec",
+    "README.md",
+    "LICENSE"
   ],
   "author": "Emmanuel Ejakpomewhe",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emmanuelorobinson/capacitor-barometer.git.git"
+    "url": "git+https://github.com/emmanuelorobinson/capacitor-barometer.git"
   },
   "bugs": {
     "url": "https://github.com/emmanuelorobinson/capacitor-barometer.git/issues"
@@ -39,7 +41,7 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api BarometerPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api Barometer --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
