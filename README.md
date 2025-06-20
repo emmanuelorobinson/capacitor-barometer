@@ -97,15 +97,15 @@ An echo method for testing.
 ### addListener('onPressureChange', ...)
 
 ```typescript
-addListener(eventName: 'onPressureChange', listenerFunc: (data: { pressure: number; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'onPressureChange', listenerFunc: (data: { pressure: number; timestamp: number; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
 Called when pressure data changes.
 
-| Param              | Type                                                  | Description                                |
-| ------------------ | ----------------------------------------------------- | ------------------------------------------ |
-| **`eventName`**    | <code>'onPressureChange'</code>                       | The name of the event ('onPressureChange') |
-| **`listenerFunc`** | <code>(data: { pressure: number; }) =&gt; void</code> | The callback function to be executed.      |
+| Param              | Type                                                                     | Description                                |
+| ------------------ | ------------------------------------------------------------------------ | ------------------------------------------ |
+| **`eventName`**    | <code>'onPressureChange'</code>                                          | The name of the event ('onPressureChange') |
+| **`listenerFunc`** | <code>(data: { pressure: number; timestamp: number; }) =&gt; void</code> | The callback function to be executed.      |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 

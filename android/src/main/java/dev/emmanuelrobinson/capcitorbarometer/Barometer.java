@@ -66,6 +66,7 @@ public class Barometer implements SensorEventListener {
             currentPressure = event.values[0]; // hPa
             JSObject ret = new JSObject();
             ret.put("pressure", currentPressure);
+            ret.put("timestamp", System.currentTimeMillis());
             pluginInstance.notifyPressureChange(ret);
         }
     }
