@@ -13,14 +13,18 @@ npx cap sync
 
 <docgen-index>
 
-* [`isAvailable()`](#isavailable)
-* [`start()`](#start)
-* [`stop()`](#stop)
-* [`getPressure()`](#getpressure)
-* [`echo(...)`](#echo)
-* [`addListener('onPressureChange', ...)`](#addlisteneronpressurechange-)
-* [`removeAllListeners()`](#removealllisteners)
-* [Interfaces](#interfaces)
+- [capacitor-barometer](#capacitor-barometer)
+  - [Install](#install)
+  - [API](#api)
+    - [isAvailable()](#isavailable)
+    - [start()](#start)
+    - [stop()](#stop)
+    - [getPressure()](#getpressure)
+    - [echo(...)](#echo)
+    - [addListener('onPressureChange', ...)](#addlisteneronpressurechange-)
+    - [removeAllListeners()](#removealllisteners)
+    - [Interfaces](#interfaces)
+      - [PluginListenerHandle](#pluginlistenerhandle)
 
 </docgen-index>
 
@@ -100,7 +104,8 @@ An echo method for testing.
 addListener(eventName: 'onPressureChange', listenerFunc: (data: { pressure: number; timestamp: number; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
-Called when pressure data changes.
+Called when pressure data changes. The returned timestamp is a Unix timestamp in seconds.
+
 
 | Param              | Type                                                                     | Description                                |
 | ------------------ | ------------------------------------------------------------------------ | ------------------------------------------ |
@@ -108,6 +113,7 @@ Called when pressure data changes.
 | **`listenerFunc`** | <code>(data: { pressure: number; timestamp: number; }) =&gt; void</code> | The callback function to be executed.      |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+
 
 --------------------
 
