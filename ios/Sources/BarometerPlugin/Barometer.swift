@@ -68,6 +68,7 @@ import Capacitor
         let pressureInHPa = pressureInKPa * 10.0
         var ret = JSObject()
         ret["pressure"] = pressureInHPa
+        ret["timestamp"] = Date().timeIntervalSince1970
         call.resolve(ret)
     }
 

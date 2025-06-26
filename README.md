@@ -70,13 +70,13 @@ Stops listening for barometer updates.
 ### getPressure()
 
 ```typescript
-getPressure() => Promise<{ pressure: number; }>
+getPressure() => Promise<{ pressure: number; timestamp: number; }>
 ```
 
 Gets the last known pressure reading.
 Ensure 'start()' has been called and data is available.
 
-**Returns:** <code>Promise&lt;{ pressure: number; }&gt;</code>
+**Returns:** <code>Promise&lt;{ pressure: number;  timestamp: number;}&gt;</code>
 
 --------------------
 
