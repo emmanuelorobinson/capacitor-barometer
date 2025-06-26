@@ -13,14 +13,18 @@ npx cap sync
 
 <docgen-index>
 
-* [`isAvailable()`](#isavailable)
-* [`start()`](#start)
-* [`stop()`](#stop)
-* [`getPressure()`](#getpressure)
-* [`echo(...)`](#echo)
-* [`addListener('onPressureChange', ...)`](#addlisteneronpressurechange-)
-* [`removeAllListeners()`](#removealllisteners)
-* [Interfaces](#interfaces)
+- [capacitor-barometer](#capacitor-barometer)
+  - [Install](#install)
+  - [API](#api)
+    - [isAvailable()](#isavailable)
+    - [start()](#start)
+    - [stop()](#stop)
+    - [getPressure()](#getpressure)
+    - [echo(...)](#echo)
+    - [addListener('onPressureChange', ...)](#addlisteneronpressurechange-)
+    - [removeAllListeners()](#removealllisteners)
+    - [Interfaces](#interfaces)
+      - [PluginListenerHandle](#pluginlistenerhandle)
 
 </docgen-index>
 
@@ -66,13 +70,13 @@ Stops listening for barometer updates.
 ### getPressure()
 
 ```typescript
-getPressure() => Promise<{ pressure: number; }>
+getPressure() => Promise<{ pressure: number; timestamp: number; }>
 ```
 
 Gets the last known pressure reading.
 Ensure 'start()' has been called and data is available.
 
-**Returns:** <code>Promise&lt;{ pressure: number; }&gt;</code>
+**Returns:** <code>Promise&lt;{ pressure: number;  timestamp: number;}&gt;</code>
 
 --------------------
 
@@ -97,17 +101,19 @@ An echo method for testing.
 ### addListener('onPressureChange', ...)
 
 ```typescript
-addListener(eventName: 'onPressureChange', listenerFunc: (data: { pressure: number; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'onPressureChange', listenerFunc: (data: { pressure: number; timestamp: number; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
-Called when pressure data changes.
+Called when pressure data changes. The returned timestamp is a Unix timestamp in seconds.
 
-| Param              | Type                                                  | Description                                |
-| ------------------ | ----------------------------------------------------- | ------------------------------------------ |
-| **`eventName`**    | <code>'onPressureChange'</code>                       | The name of the event ('onPressureChange') |
-| **`listenerFunc`** | <code>(data: { pressure: number; }) =&gt; void</code> | The callback function to be executed.      |
+
+| Param              | Type                                                                     | Description                                |
+| ------------------ | ------------------------------------------------------------------------ | ------------------------------------------ |
+| **`eventName`**    | <code>'onPressureChange'</code>                                          | The name of the event ('onPressureChange') |
+| **`listenerFunc`** | <code>(data: { pressure: number; timestamp: number; }) =&gt; void</code> | The callback function to be executed.      |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+
 
 --------------------
 

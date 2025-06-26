@@ -59,6 +59,7 @@ public class BarometerPlugin extends Plugin {
         } else {
             JSObject ret = new JSObject();
             ret.put("pressure", implementation.getCurrentPressure());
+            ret.put("timestamp", System.currentTimeMillis()/1000.0);
             call.resolve(ret);
         }
     }

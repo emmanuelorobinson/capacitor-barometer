@@ -36,7 +36,7 @@ export interface Barometer {
    */
   addListener(
     eventName: 'onPressureChange',
-    listenerFunc: (data: { pressure: number }) => void,
+    listenerFunc: (data: { pressure: number, timestamp: number }) => void,
   ): Promise<PluginListenerHandle> & PluginListenerHandle;
 
   /**

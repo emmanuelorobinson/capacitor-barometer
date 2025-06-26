@@ -37,7 +37,7 @@ export class BarometerWeb extends WebPlugin implements BarometerInterface {
   addListener(
     eventName: 'onPressureChange',
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    _listenerFunc: (data: { pressure: number }) => void,
+    _listenerFunc: (data: { pressure: number, timestamp: number }) => void,
   ): Promise<PluginListenerHandle> & PluginListenerHandle {
     if (eventName === 'onPressureChange') {
       console.warn('Barometer onPressureChange event not supported on web.');
