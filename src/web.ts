@@ -1,4 +1,5 @@
-import { WebPlugin, PluginListenerHandle } from '@capacitor/core';
+import type { PluginListenerHandle } from '@capacitor/core';
+import { WebPlugin } from '@capacitor/core';
 
 import type { Barometer as BarometerInterface } from './definitions';
 

@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { CoreService } from '../../../services/core.service';
-import { HubStorageService } from '../../../services/hub-storage.service';
-import { UserService } from '../../../services/user.service';
-import { ModalController } from '@ionic/angular';
-import { HubSettingsService } from '../../../services/hub-settings.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { DashboardHandlerService } from '../../../services/dashboard-handler.service';
-import { BleService } from '../../../services/ble.service';
-import { Platform } from '@ionic/angular';
-import { SignalrConnectionService } from '../../../services/signalr-connection.service';
-import { TelemetryCacheService } from '../../../services/telemetry-cache.service';
-import { TranslateService } from '@ngx-translate/core';
-import { HelpersProvider } from '../../../providers/helpers';
+import type { OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import type { ActivatedRoute, Router } from '@angular/router';
+import type { ModalController , Platform } from '@ionic/angular';
+
 import { Barometer } from '@ionic-native/barometer/ngx';
 import { Motion } from '@ionic-native/motion/ngx';
 import { AccelListenerEvent } from '@ionic-native/motion/ngx';
 import { OrientationListenerEvent } from '@ionic-native/motion/ngx';
+import type { TranslateService } from '@ngx-translate/core';
+import type { HelpersProvider } from '../../../providers/helpers';
+import type { BleService } from '../../../services/ble.service';
+import type { CoreService } from '../../../services/core.service';
+import type { DashboardHandlerService } from '../../../services/dashboard-handler.service';
+import type { HubSettingsService } from '../../../services/hub-settings.service';
+import type { HubStorageService } from '../../../services/hub-storage.service';
+import type { SignalrConnectionService } from '../../../services/signalr-connection.service';
+import type { TelemetryCacheService } from '../../../services/telemetry-cache.service';
+import type { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-mobile-dashboard',
