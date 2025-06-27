@@ -8,6 +8,6 @@ CAP_PLUGIN(BarometerPlugin,
            CAP_PLUGIN_METHOD(isAvailable, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(start, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(stop, CAPPluginReturnPromise);
-           CAP_PLUGIN_METHOD(getPressure, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(echo, CAPPluginReturnPromise);
 ) 

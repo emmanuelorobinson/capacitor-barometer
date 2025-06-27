@@ -21,7 +21,7 @@ export interface Barometer {
    * Gets the last known pressure reading.
    * Ensure 'start()' has been called and data is available.
    */
-  getPressure(): Promise<{ pressure: number }>;
+  getPressure(): Promise<{ pressure: number; timestamp: number }>;
 
   /**
    * An echo method for testing.

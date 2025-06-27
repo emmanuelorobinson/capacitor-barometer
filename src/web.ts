@@ -24,7 +24,7 @@ export class BarometerWeb extends WebPlugin implements BarometerInterface {
     return Promise.resolve();
   }
 
-  async getPressure(): Promise<{ pressure: number }> {
+  async getPressure(): Promise<{ pressure: number; timestamp: number}> {
     console.log('Barometer: getPressure called on web - not implemented');
     throw this.unavailable('Barometer functionality is not available on the web.');
   }
