@@ -1,11 +1,11 @@
-# capacitor-barometer
+# @mhaberler/capacitor-barometer
 
 Capacitor-Barometer is a native plugin for Capacitor that provides access to barometric pressure sensor data on supported devices. Easily integrate real-time atmospheric pressure readings into your cross-platform mobile apps for weather tracking, altitude estimation, or scientific applications.
 
 ## Install
 
 ```bash
-npm install capacitor-barometer
+npm install @mhaberler/capacitor-barometer
 npx cap sync
 ```
 
